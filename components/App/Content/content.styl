@@ -1,0 +1,21 @@
+#content-container {
+  flex: 1;
+  display:flex;
+  flex-wrap: wrap;
+
+  flex-direction: row;
+
+  #page-container {
+    flex: 1;
+    overflow-x: hidden;
+    background: #e4e4e4;
+   
+    #page > * {
+      background: #ffffff;
+      padding: 1.5em;
+      margin: 1.25em .75em;
+      box-shadow: 0em 0em .5em .25em rgb(190, 190, 190, .7);
+      -webkit-box-shadow: 0em 0em .5em .25em rgb(190, 190, 190, .7);  
+    }
+  }
+}

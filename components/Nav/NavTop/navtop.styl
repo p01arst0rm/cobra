@@ -1,0 +1,28 @@
+@import '~@/assets/styles/mixins/showHide.styl'
+
+#content-wrapper #topnav-wrapper {
+  margin: 0em 0em;
+}
+
+#topnav-wrapper {
+  background: #a50668;
+  display: none;
+  overflow-y: hidden;
+  width: 100%;
+  
+  .site-link {
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1em;
+    padding-top: .8em; 
+    &.router-link-active {
+      color: #a2a3d9;
+    }
+  }
+}
+
+#topnav-wrapper.open, #topnav-wrapper.closed {
+  display: inline-block;
+}

@@ -1,0 +1,6 @@
+{
+  "appName": "Gibson [CTF]",
+  "apiAddress": "http://api.ctf.com",
+  "minWidthDesktop": "800",
+  "minWidthMixin": "screen and (min-width: 800px)"
+}

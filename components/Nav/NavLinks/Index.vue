@@ -1,0 +1,70 @@
+<template>
+  <div class="site-link-wrapper">
+    <nuxt-link
+      class="site-link"
+      to="/"
+    >
+      Home
+    </nuxt-link>
+    <nuxt-link
+      class="site-link"
+      to="/Leaderboard"
+    >
+      Leaderboard
+    </nuxt-link>
+    <nuxt-link
+      class="site-link"
+      to="/Teams"
+    >
+      Teams
+    </nuxt-link>
+    <nuxt-link
+      class="site-link"
+      to="/Challenges"
+    >
+      Challenges
+    </nuxt-link>
+    <nuxt-link
+      class="site-link"
+      to="/Machines"
+    >
+      Machines
+    </nuxt-link>
+    <nuxt-link
+      class="site-link"
+      to="/Forts"
+    >
+      Forts
+    </nuxt-link>
+    <nuxt-link
+      class="site-link"
+      to="/Login"
+    >
+      Login
+    </nuxt-link>
+    <nuxt-link
+      class="site-link"
+      to="/Profile"
+    >
+      Profile
+    </nuxt-link>
+    <a
+      class="site-link"
+      to="http://secwiki.ctf/com/"
+    >
+      SecVault
+    </a>
+    <nuxt-link
+      class="site-link"
+      to="/About"
+    >
+      About
+    </nuxt-link>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SiteLinks'
+}
+</script>

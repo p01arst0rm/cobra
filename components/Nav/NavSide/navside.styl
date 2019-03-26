@@ -1,0 +1,38 @@
+@import '~@/assets/styles/mixins/showHide.styl'
+@import '~@/util/config.styl'
+
+/* fix for margin boosting */
+#navside-container {
+  overflow: hidden;
+
+  /* fix for pop in */
+  #navside-wrapper {
+    max-width: 0;  
+  }
+  
+  @media minWidthMixin {
+    #navside-wrapper {
+      max-width: 100%;
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+}
+
+#navside-wrapper {
+  display:inline-block;
+  flex: 1;
+  height: 100%;
+  background: #a50668;
+  .site-link {
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1em;
+    padding-top: .8em; 
+    &.router-link-active {
+      color: #a2a3d9;
+    }
+  }
+}

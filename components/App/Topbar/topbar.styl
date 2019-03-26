@@ -1,0 +1,54 @@
+@import '~@/assets/styles/mixins/showHide.styl'
+
+#topbar-wrapper {
+  background: #c6097d;
+  display: block;
+  box-shadow: 0em 0em 1em .25em rgb(190, 190, 190, .7);
+  -webkit-box-shadow: 0em 0em 1em .25em rgb(190, 190, 190, .7);    
+  
+  .topbar {
+    white-space : nowrap;
+    > * {
+      white-space : nowrap;
+      overflow-x: hidden;
+      vertical-align: middle;
+      display: inline-block;
+      margin: 1em 2em;
+    }
+    .title {
+      a {
+        color: #FFFFFF; 
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 2em;
+      }
+    }
+    .sidebar-toggle {
+       float: right;
+    } 
+  }
+}
+
+#app.desktop {
+  .topbar {
+    .sidebar-toggle {
+      width: 0em;
+    }
+  }
+}
+
+#app.mini {
+  .topbar {
+    .sidebar-toggle {
+      width: 1em;
+    }
+  }
+}
+
+#app.mobile {
+  .topbar {
+    #sidebar-toggle {
+      max-width: 0em;
+    }
+  }
+}
