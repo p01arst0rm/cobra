@@ -7,7 +7,7 @@
         </nuxt-link>
       </div>
       <div class="sidebar-toggle">
-        <!--<Eburger id="sidebar-toggle" tag="Menu" />-->
+        <NavButton />
       </div>
     </div>
   </span>
@@ -15,12 +15,12 @@
 
 <script>
 import config from '~/util/config'
-// import Eburger from '~/components/UI/Eburger/Index.vue'
+import NavButton from '~/components/Nav/NavButton/Index.vue'
 
 export default {
   name: 'Topbar',
   components: {
-    // Eburger
+    NavButton
   },
   data() {
     return {

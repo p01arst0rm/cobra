@@ -1,20 +1,21 @@
 <template>
-  <div class="home">
-    <img
-      alt="Vue logo"
-      src="~/assets/logo.png"
-    >
+  <div id="page" class="signup">
+    <div>
+      <h1>
+        Signup
+      </h1>
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'Signup',
   components: {
   },
   head() {
     return {
-      title: 'Sign Up'
+      title: 'Signup'
     }
   }
 }

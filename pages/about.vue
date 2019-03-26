@@ -1,21 +1,25 @@
 <template>
-  <div class="home">
-    <img
-      alt="Vue logo"
-      src="~/assets/logo.png"
-    >
+  <div id="page" class="index">
+    <div>
+      <h1>
+        About
+      </h1>
+      <img
+        alt="Vue logo"
+        src="~/assets/logo.png"
+      >
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'About',
-  components: {
 
+export default {
+  components: {
   },
   head() {
     return {
-      title: 'about'
+      title: 'About'
     }
   }
 }

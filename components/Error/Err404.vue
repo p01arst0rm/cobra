@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'HelloWorld'
+  name: 'Err404'
 }
 </script>

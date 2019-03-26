@@ -1,8 +1,8 @@
 <template>
-  <div id="page" class="login">
+  <div id="page" class="index">
     <div>
       <h1>
-        Login
+        Profile
       </h1>
     </div>
   </div>
@@ -15,7 +15,7 @@ export default {
   },
   head() {
     return {
-      title: 'Login'
+      title: 'Profile'
     }
   }
 }

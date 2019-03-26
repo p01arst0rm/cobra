@@ -3,7 +3,7 @@
     <h1
       v-if="error.statusCode === 404"
     >
-      Page not found
+      <Err404 />
     </h1>
     <h1
       v-else
@@ -19,7 +19,12 @@
 </template>
 
 <script>
+import Err404 from '~/components/Error/Err404.vue'
+
 export default {
+  components: {
+    Err404
+  },
   props: {
     error: {
       type: null,

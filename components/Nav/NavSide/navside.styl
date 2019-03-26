@@ -1,16 +1,16 @@
-@import '~@/assets/styles/mixins/showHide.styl'
-@import '~@/util/config.styl'
+@import '~@/assets/styles/mixins/minWidth.styl'
 
 /* fix for margin boosting */
 #navside-container {
+  display:inline-block;
   overflow: hidden;
 
   /* fix for pop in */
   #navside-wrapper {
-    max-width: 0;  
+    max-width: 0; 
   }
   
-  @media minWidthMixin {
+  @media minWidthDesktopMixin {
     #navside-wrapper {
       max-width: 100%;
       padding-left: 2em;
@@ -21,10 +21,11 @@
 
 #navside-wrapper {
   display:inline-block;
+  overflow: hidden;
   flex: 1;
   height: 100%;
   background: #a50668;
-  .site-link {
+  .nav-link {
     text-decoration: none;
     display: block;
     font-weight: bold;

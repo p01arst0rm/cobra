@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import config from '~/util/config'
 import NavLinks from '~/components/Nav/NavLinks/Index.vue'
 
 export default {
@@ -17,67 +16,121 @@ export default {
   components: {
     NavLinks
   },
+  data() {
+    return {
+      elemNavSideWrap: null,
+      elemNavSide: null
+    }
+  },
   mounted() {
-    this.initView()
-    window.addEventListener('resize', this.updateState)
+    /* fetch component elements */
+    this.elemNavSideWrap = document.getElementById('navside-wrapper')
+    this.elemNavSide = document.getElementById('navside')
+
+    /* hook onto calls */
+    this.$store.subscribe((mutation, state) => {
+      switch (mutation.type) {
+        case 'init':
+          this.init()
+          break
+        case 'resize':
+          this.update()
+          break
+        case 'nav/toggleNavActive':
+          this.toggleNavActive()
+          break
+      }
+    })
   },
   methods: {
-    getViewState: function () {
-      if (document.body.clientWidth > config.minWidthDesktop) {
-        return 'full'
-      } else {
-        return 'mini'
+    init: function () {
+      /* initalise component */
+      switch (this.$store.state.mode) {
+        case 'full':
+          this.$store.commit('nav/setNavSideEnabled', true)
+          this.$store.commit('nav/setNavSideState', 'open')
+          this.$velocity(this.elemNavSideWrap,
+            {
+              maxWidth: '100%',
+              paddingLeft: '2em',
+              paddingRight: '2em'
+            })
+          break
+        default:
+          this.$store.commit('nav/setNavSideEnabled', false)
+          this.$store.commit('nav/setNavSideState', 'closed')
+          this.$velocity(this.elemNavSideWrap,
+            {
+              maxWidth: '0em',
+              paddingLeft: '0em',
+              paddingRight: '0em'
+            })
+          break
       }
     },
-    updateState: function () {
-      const animState = this.getViewState()
-      const sidebarWrapElem = document.getElementById('navside-wrapper')
-      const sidebarElem = document.getElementById('navside')
-      const target = sidebarElem.scrollWidth
-      if (sidebarWrapElem.className !== animState) {
-        switch (animState) {
-          case 'full':
-            this.$velocity(
-              sidebarWrapElem,
-              {
-                maxWidth: [target, 0],
-                paddingLeft: ['2em', '0em'],
-                paddingRight: ['2em', '0em']
-              },
-              {
-                ease: 'ease-in-out',
-                duration: 400
-              })
+    update: function () {
+      /* update component */
+      switch (this.$store.state.mode) {
+        case 'full':
+          this.$store.commit('nav/setNavSideEnabled', true)
+          if (this.$store.state.nav.navSideState === 'open') {
+            this.animateNavOpen()
+          }
+          break
+        default:
+          if (this.$store.state.nav.navSideEnabled) {
+            this.$store.commit('nav/setNavSideEnabled', false)
+            if (this.$store.state.nav.navSideState === 'open') {
+              this.animateNavClose()
+            }
+          }
+          break
+      }
+    },
+    toggleNavActive: function () {
+      /* toggle nav open/closed */
+      if (this.$store.state.nav.navSideEnabled) {
+        switch (this.$store.state.nav.navSideState) {
+          case 'open':
+            this.animateNavClose()
+            this.$store.commit('nav/setNavSideState', 'closed')
             break
-          case 'mini':
-            this.$velocity(sidebarWrapElem, {
-              maxWidth: [0, target],
-              paddingLeft: ['0em', '2em'],
-              paddingRight: ['0em', '2em']
-            },
-            {
-              ease: 'ease-in-out',
-              duration: 400
-            })
+          case 'closed':
+            this.animateNavOpen()
+            this.$store.commit('nav/setNavSideState', 'open')
             break
           default:
+            break
         }
-        sidebarWrapElem.className = animState
       }
     },
-    initView: function () {
-      const animState = this.getViewState()
-      const sidebarWrapElem = document.getElementById('navside-wrapper')
-      if (animState === 'full') {
-        sidebarWrapElem.style.maxWidth = '100%'
-        sidebarWrapElem.style.paddingLeft = '2em'
-        sidebarWrapElem.style.paddingRight = '2em'
-      } else if (animState === 'mini') {
-        sidebarWrapElem.style.maxWidth = '0'
-        sidebarWrapElem.style.paddingLeft = '0em'
-        sidebarWrapElem.style.paddingRight = '0em'
-      }
-      sidebarWrapElem.className = animState
+    animateNavOpen: function () {
+      /* nav open animation */
+      this.$velocity(this.elemNavSideWrap,
+        {
+          maxWidth: [this.elemNavSide.scrollWidth, 0],
+          paddingLeft: ['2em', 0],
+          paddingRight: ['2em', 0]
+        },
+        {
+          ease: 'ease-in-out',
+          duration: 300
+        }
+      )
+    },
+    animateNavClose: function () {
+      /* nav close animation */
+      this.$velocity(this.elemNavSideWrap,
+        {
+          maxWidth: ['0em', this.elemNavSide.scrollWidth],
+          paddingLeft: ['0em', '2em'],
+          paddingRight: ['0em', '2em']
+        },
+        {
+          ease: 'ease-in-out',
+          duration: 300
+        }
+      )
     }
   }
 }

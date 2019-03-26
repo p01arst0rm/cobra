@@ -18,20 +18,20 @@ function formatcookie() {
   return keypairArray
 }
 
-export function getCookie(name) {
+export function getCookie(cname) {
   const keypairArray = formatcookie()
   console.log(keypairArray)
 
   for (let i = 0; i < keypairArray.length; i += 1) {
     const keypair = keypairArray[i]
-    if (keypair[0] === name) {
+    if (keypair[0] === cname) {
       return keypair[1]
     }
   }
 }
 
 export function setCookie(cname, value) {
-  const cookie = name + '=' + value + ';'
+  const cookie = cname + '=' + value + ';'
   document.cookie = cookie
 }
 

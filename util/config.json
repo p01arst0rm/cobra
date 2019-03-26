@@ -1,6 +1,7 @@
 {
-  "appName": "Gibson [CTF]",
-  "apiAddress": "http://api.ctf.com",
+  "appName": "Cobra",
+  "apiAddress": "",
   "minWidthDesktop": "800",
-  "minWidthMixin": "screen and (min-width: 800px)"
+  "minWidthMini": "500",
+  "minWidthMobile": "300"
 }
