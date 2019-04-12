@@ -1,17 +1,22 @@
 <template>
   <div id="NavController">
-    <button
+    <div
+      class="animated-button"
       @click="toggleNav()"
     >
-      aaa
-    </button>
+      <FadeButton tag="menu" />
+    </div>
   </div>
 </template>
 
 <script>
+import FadeButton from '~/components/UI/FadeButton/Index.vue'
 
 export default {
   name: 'NavButton',
+  components: {
+    FadeButton
+  },
   methods: {
     toggleNav: function () {
       this.$store.commit('nav/toggleNavActive')
@@ -19,3 +24,7 @@ export default {
   }
 }
 </script>
+
+<style lang='stylus'>
+@import 'navButton.styl'
+</style>

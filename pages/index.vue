@@ -4,11 +4,8 @@
       <div>
         <logo />
         <h1 class="title">
-          gibson-app
+          {{ appName }}
         </h1>
-        <h2 class="subtitle">
-          Gibson CTF app
-        </h2>
         <div class="links">
           <a
             href="https://nuxtjs.org/"
@@ -36,6 +33,7 @@
 </template>
 
 <script>
+import config from '~/util/config'
 import Logo from '~/components/Logo.vue'
 
 export default {
@@ -45,6 +43,11 @@ export default {
   head() {
     return {
       title: 'Home'
+    }
+  },
+  data() {
+    return {
+      appName: config.appName
     }
   }
 }
@@ -69,7 +72,7 @@ export default {
   letter-spacing: 1px;
 }
 
-.subtitle {
+.container .title {
   font-weight: 300;
   font-size: 42px;
   color: #526488;

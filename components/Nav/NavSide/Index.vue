@@ -137,5 +137,5 @@ export default {
 </script>
 
 <style lang='stylus'>
-@import 'navside.styl'
+@import 'navSide.styl'
 </style>

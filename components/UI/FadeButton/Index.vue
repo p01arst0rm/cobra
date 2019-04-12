@@ -1,12 +1,12 @@
 <template>
-  <div class="e-burger">
+  <div class="fade-button">
     {{ tag }}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Eburger',
+  name: 'FadeButton',
   props: {
     tag: {
       default: 'tag',
@@ -16,7 +16,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="stylus">
-@import 'eburger.styl'
+<style lang="stylus">
+@import 'fadebutton.styl'
 </style>
