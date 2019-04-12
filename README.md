@@ -1,6 +1,13 @@
 # cobra
 
-> Cobra
+Cobra is a simple Nuxt template containing a collection of
+applets. It is designed to help quickly create a website 
+base without the need of additional bloated packages.
+
+Cobra comes pre-packaged with velocityJS, reactive page 
+navigation elements, and event hooks for page initilaisation 
+and window resizing.
+
 
 ## Build Setup
 
