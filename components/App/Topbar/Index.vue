@@ -3,7 +3,7 @@
     <div class="topbar">
       <div class="title">
         <nuxt-link to="/">
-          {{ title }}
+          {{ appName }}
         </nuxt-link>
       </div>
       <div class="sidebar-toggle">
@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      title: config.appName
+      appName: config.appName
     }
   }
 }
