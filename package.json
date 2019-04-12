@@ -46,7 +46,15 @@
     ]
   },
   "jest": {
-    "moduleFileExtensions": ["js", "json", "jsx", "ts", "tsx", "node", "vue"],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node",
+      "vue"
+    ],
     "moduleNameMapper": {
       "~(.*)": "<rootDir>/$1"
     },
