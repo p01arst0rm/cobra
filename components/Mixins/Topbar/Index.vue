@@ -15,7 +15,7 @@
 
 <script>
 import config from '~/util/config'
-import NavButton from '~/components/Applets/Nav/NavButton/Index.vue'
+import NavButton from '~/components/Mixins/Nav/NavButton/Index.vue'
 
 export default {
   name: 'Topbar',

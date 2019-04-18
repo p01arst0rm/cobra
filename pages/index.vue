@@ -34,7 +34,7 @@
 
 <script>
 import config from '~/util/config'
-import Logo from '~/components/Applets/Logo/Index.vue'
+import Logo from '~/components/Mixins/Logo/Index.vue'
 
 export default {
   components: {
