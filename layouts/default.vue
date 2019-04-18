@@ -1,21 +1,18 @@
 <template>
   <div id="app" class="full">
-    <Topbar />
-    <NavTop />
+    <Header />
     <Content />
   </div>
 </template>
 
 <script>
 import { getMode } from '~/util/proc/ui'
-import Topbar from '~/components/App/Topbar/Index.vue'
-import NavTop from '~/components/Nav/NavTop/Index.vue'
+import Header from '~/components/App/Header/Index.vue'
 import Content from '~/components/App/Content/Index.vue'
 
 export default {
   components: {
-    Topbar,
-    NavTop,
+    Header,
     Content
   },
   mounted() {

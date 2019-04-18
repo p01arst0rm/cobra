@@ -1,20 +1,22 @@
 <template>
-  <div class="container">
-    <h1
-      v-if="error.statusCode === 404"
-    >
-      <Err404 />
-    </h1>
-    <h1
-      v-else
-    >
-      An error occurred!
-    </h1>
-    <nuxt-link
-      to="/"
-    >
-      Home page
-    </nuxt-link>
+  <div id="page" class="error">
+    <div class="container">
+      <h1
+        v-if="error.statusCode === 404"
+      >
+        <Err404 />
+      </h1>
+      <h1
+        v-else
+      >
+        An error occurred!
+      </h1>
+      <nuxt-link
+        to="/"
+      >
+        Home page
+      </nuxt-link>
+    </div>
   </div>
 </template>
 

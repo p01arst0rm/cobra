@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import NavSide from '~/components/Nav/NavSide/Index.vue'
+import NavSide from '~/components/App/Nav/NavSide/Index.vue'
 
 export default {
   components: {

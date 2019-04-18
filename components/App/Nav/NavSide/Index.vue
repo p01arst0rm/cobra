@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import NavLinks from '~/components/Nav/NavLinks/Index.vue'
+import NavLinks from '~/components/App/Nav/NavLinks/Index.vue'
 
 export default {
   name: 'NavSide',
