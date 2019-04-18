@@ -2,6 +2,7 @@
   <div id="app" class="full">
     <Header />
     <Content />
+    <Footer />
   </div>
 </template>
 
@@ -9,11 +10,13 @@
 import { getMode } from '~/util/proc/ui'
 import Header from '~/components/App/Header/Index.vue'
 import Content from '~/components/App/Content/Index.vue'
+import Footer from '~/components/App/Footer/Index.vue'
 
 export default {
   components: {
     Header,
-    Content
+    Content,
+    Footer
   },
   mounted() {
     this.$store.commit('init')

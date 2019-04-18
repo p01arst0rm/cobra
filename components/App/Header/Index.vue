@@ -7,7 +7,7 @@
 
 <script>
 import Topbar from '~/components/Applets/Topbar/Index.vue'
-import NavTop from '~/components/App/Nav/NavTop/Index.vue'
+import NavTop from '~/components/Applets/Nav/NavTop/Index.vue'
 
 export default {
   components: {
