@@ -1,18 +1,18 @@
 <template>
   <div id="content-container">
     <NavSide />
-    <div id="page-container">
-      <nuxt />
-    </div>
+    <Page />
   </div>
 </template>
 
 <script>
 import NavSide from '~/components/Mixins/Nav/NavSide/Index.vue'
+import Page from '~/components/App/Page/Index.vue'
 
 export default {
   components: {
-    NavSide
+    NavSide,
+    Page
   }
 }
 </script>

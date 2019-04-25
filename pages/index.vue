@@ -28,14 +28,6 @@
       <p>
         i am another element!!
       </p>
-      <p>
-        i am another element!!
-      </p>
-      <a
-        href = "/a.zip"
-      >
-        test
-      </a>
     </div>
   </div>
 </template>
