@@ -1,4 +1,5 @@
-@import "~@/assets/styles/fonts.styl"
+// Main application Stylus file.
+// ---------------------------------------------------------
 
 /* fix for font boosting */
 html * {
@@ -8,6 +9,21 @@ html * {
 body {
   padding: 0;
   margin: 0;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgba(245,245,245,0.3);
+}
+
+::-webkit-scrollbar {
+	background-color: #F5F5F5;
+	width: 12px;
+	height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(247,130,52,1);
 }
 
 #app {
