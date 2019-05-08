@@ -16,7 +16,3 @@ export default {
   }
 }
 </script>
-
-<style lang="styl">
-@import '~@/assets/styles/default.styl'
-</style>
