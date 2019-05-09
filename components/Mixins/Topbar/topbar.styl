@@ -1,8 +1,10 @@
+@import '~@/assets/styles/themes/header.styl'
 
 #topbar-wrapper {   
   
   .topbar {
-    background: #c6097d;
+    background: headerBackground;
+    font-family: headerFontFamily;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -16,7 +18,7 @@
     .title {
       flex: 1 0 auto;
       a {
-        color: #FFFFFF; 
+        color: headerColour;
         text-decoration: none;
         font-weight: bold;
         font-size: 2em;
