@@ -1,17 +1,24 @@
+// Stylus file for page element
+// ---------------------------------------------------------
+
+@import '~@/assets/styles/themes/page.styl'
+
 #page-container {
   flex: 1;
   overflow-x: hidden;
-  box-shadow: inset 0rem 0rem .5rem .1rem rgb(190, 190, 190, .7);
-  -webkit-box-shadow: inset 0rem 0rem .5rem .1rem rgb(190, 190, 190, .7);  
+  box-shadow: inset pageShadow;
 
   #page {
     > * {
-      overflow-x: auto;
-      margin: 1.25rem .75rem;
       background: #ffffff;
-      border: 1.5rem solid #ffffff;
-      box-shadow: 0rem 0rem .5rem .1rem rgb(190, 190, 190, .7);
-      -webkit-box-shadow: 0rem 0rem .5rem .1rem rgb(190, 190, 190, .7);  
+      border: pageBorder;
+      box-shadow: pageShadow;
+      margin: 1.25rem .75rem;
+      overflow-x: auto;
+      > * {
+        border: itemBorder;
+        overflow-x: visible;
+      }
     }
   }
 }

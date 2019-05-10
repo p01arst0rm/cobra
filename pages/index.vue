@@ -1,29 +1,31 @@
 <template>
   <div id="page" class="index">
-    <section class="container">
-      <div>
-        <logo />
-        <h1 class="title">
-          {{ appName }}
-        </h1>
-        <div class="links">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            class="button--green"
-          >
-            Documentation
-          </a>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            class="button--grey"
-          >
-            GitHub
-          </a>
+    <div>
+      <logo />
+      <section class="container">
+        <div>
+          <h1 class="title">
+            {{ appName }}
+          </h1>
+          <div class="links">
+            <a
+              href="https://nuxtjs.org/"
+              target="_blank"
+              class="button--green"
+            >
+              Documentation
+            </a>
+            <a
+              href="https://github.com/nuxt/nuxt.js"
+              target="_blank"
+              class="button--grey"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <div>
       <p>
         i am another element!!
@@ -55,8 +57,6 @@ export default {
 
 <style>
 .container {
-  margin: 0 auto;
-  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
