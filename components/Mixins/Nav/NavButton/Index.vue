@@ -1,7 +1,6 @@
 <template>
   <div id="NavController">
     <div
-      class="animated-button"
       @click="toggleNav()"
     >
       <FadeButton tag="menu" />

@@ -1,6 +1,8 @@
 <template>
-  <div class="fade-button">
-    {{ tag }}
+  <div class="animated-button">
+    <div class="fade-button">
+      {{ tag }}
+    </div>
   </div>
 </template>
 
@@ -16,6 +18,6 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import 'fadebutton.styl'
 </style>
