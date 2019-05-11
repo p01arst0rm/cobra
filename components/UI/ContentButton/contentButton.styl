@@ -1,0 +1,23 @@
+@import '~@/assets/styles/themes/ui/ui.styl'
+@import '~@/assets/styles/themes/ui/contentButton.styl'
+
+.animated-button {
+  
+  .fade-button {
+    background: buttonBackground;
+    text-decoration: none;
+    font-family: buttonFontFamily;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: .1rem;
+    border: buttonBorder;
+    color: buttonColor;
+    transition: buttonBackgroundTransition;
+  }
+
+  .fade-button:hover, .fade-button:focus {
+    background: buttonBackgroundHighlight;
+    color: buttonColorHighlight;
+    transition: buttonBackgroundTransition;
+  }
+}

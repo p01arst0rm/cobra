@@ -3,18 +3,18 @@
     <div
       @click="toggleNav()"
     >
-      <FadeButton tag="menu" />
+      <ContentButton tag="menu" />
     </div>
   </div>
 </template>
 
 <script>
-import FadeButton from '~/components/UI/FadeButton/Index.vue'
+import ContentButton from '~/components/UI/ContentButton/Index.vue'
 
 export default {
   name: 'NavButton',
   components: {
-    FadeButton
+    ContentButton
   },
   methods: {
     toggleNav: function () {
