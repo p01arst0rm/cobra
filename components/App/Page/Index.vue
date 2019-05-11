@@ -11,5 +11,5 @@ export default {
 
 <style lang="styl">
 @import 'page.styl'
-@import '~@/assets/styles/nuxt.styl'
+@import '~@/assets/styles/layouts/nuxt.styl'
 </style>
