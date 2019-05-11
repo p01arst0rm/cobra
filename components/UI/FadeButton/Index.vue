@@ -1,5 +1,8 @@
 <template>
-  <div class="animated-button">
+  <div
+    class="animated-button"
+    @click="toggle()"
+  >
     <div class="fade-button">
       {{ tag }}
     </div>
@@ -13,6 +16,11 @@ export default {
     tag: {
       default: 'tag',
       type: String
+    }
+  },
+  methods: {
+    toggle: function () {
+      console.log('pressed!')
     }
   }
 }
