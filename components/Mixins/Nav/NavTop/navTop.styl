@@ -1,15 +1,16 @@
+@import '~@/assets/styles/themes/nav.styl'
 
 /* fix for margin boosting */
 #navtop-container {
   overflow: hidden;
   /* fix for pop in */
   #navtop-wrapper {
-    max-height: 0;  
+    max-height: 0;
   }
 }
 
 #navtop-wrapper {
-  background: #a50668;
+  background: navBackground;
   width: 100%;
   text-align: center;
   .nav-link {
@@ -17,12 +18,12 @@
     text-decoration: none;
     display: block;
     font-weight: bold;
-    color: #ffffff;
+    color: navColor;
     font-size: 1em;
     padding-top: .4em;
     padding-bottom: .4em;  
     &.router-link-active {
-      color: #a2a3d9;
+      color: navLinkActiveColor;
     }
   }
 }

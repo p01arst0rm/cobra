@@ -1,3 +1,4 @@
+@import '~@/assets/styles/themes/nav.styl'
 @import '~@/assets/mixins/minWidth.styl'
 
 /* fix for margin boosting */
@@ -24,16 +25,16 @@
   overflow: hidden;
   flex: 1;
   height: 100%;
-  background: #a50668;
+  background: navBackground;
   .nav-link {
     text-decoration: none;
     display: block;
     font-weight: bold;
-    color: #ffffff;
+    color: navColor;
     font-size: 1rem;
     padding-top: .8rem; 
-    &.router-link-active {
-      color: #a2a3d9;
+    &.nuxt-link-active {
+      color: navLinkActiveColor;
     }
   }
 }
