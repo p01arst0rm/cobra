@@ -1,9 +1,9 @@
 <template>
   <div id="navtop-container">
     <div id="navtop-wrapper">
-      <div id="navtop">
+      <nav id="navtop">
         <NavLinks />
-      </div>
+      </nav>
     </div>
   </div>
 </template>

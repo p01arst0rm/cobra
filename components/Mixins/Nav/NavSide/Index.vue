@@ -1,9 +1,9 @@
 <template>
   <div id="navside-container">
     <div id="navside-wrapper">
-      <div id="navside">
+      <nav id="navside">
         <NavLinks />
-      </div>
+      </nav>
     </div>
   </div>
 </template>
