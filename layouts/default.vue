@@ -23,7 +23,7 @@ export default {
     window.addEventListener('resize', this.resize)
   },
   methods: {
-    resize: function (value) {
+    resize: function () {
       const mode = getMode()
       if (this.$store.state.mode !== mode) {
         this.$store.commit('resize', mode)

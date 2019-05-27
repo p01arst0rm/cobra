@@ -28,7 +28,7 @@ export default {
     this.elemNavTop = document.getElementById('navtop')
 
     /* hook onto calls */
-    this.$store.subscribe((mutation, state) => {
+    this.$store.subscribe((mutation) => {
       switch (mutation.type) {
         case 'init':
           this.init()

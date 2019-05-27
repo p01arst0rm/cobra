@@ -28,7 +28,7 @@ export default {
     this.elemNavSide = document.getElementById('navside')
 
     /* hook onto calls */
-    this.$store.subscribe((mutation, state) => {
+    this.$store.subscribe((mutation) => {
       switch (mutation.type) {
         case 'init':
           this.init()
