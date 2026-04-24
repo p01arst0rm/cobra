@@ -1,6 +1,12 @@
-import velocity from 'velocity-animate/velocity.min.js'
+export default defineNuxtPlugin(async (nuxtApp) => {
+  // Only import when running in the browser
+  if (import.meta.client) {
+    const velocity = (await import('velocity-animate/velocity.min.js')).default
 
-export default (ctx, inject) => {
-  ctx.$velocity = velocity
-  inject('velocity', velocity)
-}
+    return {
+      provide: {
+        velocity: velocity
+      }
+    }
+  }
+})
