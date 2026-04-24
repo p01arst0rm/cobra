@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   ],
   plugins: [
 	  { 
-      src: '~/plugins/velocity.js'
+      src: '~/plugins/velocity.ts'
     }],
   // alias: {
   //   '~': path.resolve(process.cwd(), 'app'),
