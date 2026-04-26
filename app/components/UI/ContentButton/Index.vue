@@ -21,5 +21,30 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import 'contentButton.styl'
+
+@import 'assets/styles/default/ui.styl'
+
+.animated-button {
+  
+  .fade-button {
+    background: buttonBackground;
+    border: buttonBorder;
+    border-radius: .25rem;
+    color: buttonColor;
+    text-decoration: none;
+    font-family: buttonFontFamily;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    transition: buttonBackgroundTransition;
+    user-select: none;
+    text-align: center;
+  }
+
+  .fade-button:hover, .fade-button:focus {
+    background: buttonBackgroundHighlight;
+    color: buttonColorHighlight;
+    transition: buttonBackgroundTransition;
+  }
+}
+
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="page" class="index">
     <div>
-      <logo />
+      <Logo />
       <section class="container">
         <div>
           <h1 class="title">
@@ -26,17 +26,12 @@
         </div>
       </section>
     </div>
-    <div>
-      <p>
-        i am another element!!
-      </p>
-    </div>
   </div>
 </template>
 
 <script>
 import config from '~/util/config'
-import Logo from '~/components/Mixins/Logo/Index.vue'
+import Logo from '~/components/Logo/Index.vue'
 
 export default {
   components: {

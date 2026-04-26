@@ -1,0 +1,55 @@
+@import 'assets/styles/default/header.styl'
+
+#topbar-wrapper {   
+  
+  .topbar {
+    background: headerBackground;
+    font-family: headerFontFamily;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden;
+    
+    > * {
+      padding: 1rem 1.5rem;
+    }
+    .title {
+      flex: 1 0 auto;
+      a {
+        color: headerColour;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    }
+    .sidebar-toggle {
+      float: right;
+    } 
+  }
+}
+
+#app.desktop {
+  .topbar {
+    .sidebar-toggle {
+      width: 0rem;
+    }
+  }
+}
+
+#app.mini {
+  .topbar {
+    .sidebar-toggle {
+      width: 1em;
+    }
+  }
+}
+
+#app.mobile {
+  .topbar {
+    #sidebar-toggle {
+      max-width: 0em;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import 'assets/styles/default/nav.styl'
+
+/* fix for margin boosting */
+#navtop-container {
+  overflow: hidden;
+  /* fix for pop in */
+  #navtop-wrapper {
+    max-height: 0;
+  }
+}
+
+#navtop-wrapper {
+  background: navBackground;
+  width: 100%;
+  text-align: center;
+  .nav-link {
+    width: 100%;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    color: navColor;
+    font-size: 1em;
+    padding-top: .4em;
+    padding-bottom: .4em;  
+    &.nuxt-link-active {
+      color: navLinkActiveColor;
+    }
+  }
+}
+
+#topnav-wrapper.open, #topnav-wrapper.closed {
+  display: inline-block;
+}

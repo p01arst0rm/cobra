@@ -7,10 +7,11 @@
 </template>
 
 <script>
-import { getMode } from '~/util/proc/ui'
-import Header from '~/components/App/Header/Index.vue'
-import Content from '~/components/App/Content/Index.vue'
-import Footer from '~/components/App/Footer/Index.vue'
+  import { getMode } from '~/util/proc/ui'
+  import { useNavStore } from '~/stores/nav'
+  import Header from '~/components/Header/Index.vue'
+  import Content from '~/components/Content/Index.vue'
+  import Footer from '~/components/Footer/Index.vue'
 
 export default {
   components: {
@@ -18,21 +19,25 @@ export default {
     Content,
     Footer
   },
+  setup() {
+    const navStore = useNavStore()
+    return { navStore }
+  },
   mounted() {
-    this.$store.commit('init')
+    this.navStore.init()
     window.addEventListener('resize', this.resize)
   },
   methods: {
     resize: function () {
-      const mode = getMode()
-      if (this.$store.state.mode !== mode) {
-        this.$store.commit('resize', mode)
+      const navMode = getMode()
+        if (this.navStore.mode !== navMode) {
+        this.navStore.resize(navMode)
       }
     }
   }
 }
 </script>
 
-<style lang="styl">
-@import '~@/assets/styles/layouts/default.styl'
+<style lang="stylus">
+  @import 'assets/styles/default/layout.styl'
 </style>
